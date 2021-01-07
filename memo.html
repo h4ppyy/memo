@@ -1,0 +1,29 @@
+...
+    <form actions="javascript:void(0);">
+      <p>
+        <label for="name">名前</label>
+        <input type="text" value="<%= @user.name %>" readonly=true/>
+      </p>
+      <p>
+        <label for="eamil">Eメール</label>
+        <input type="email" value="<%= @user.email %>" readonly=true/>
+      </p>
+      <p>
+        <label for="password">パスワード</label>
+        <input type="password" value="<%= @user.password %>" readonly=true/>
+      </p>
+      <button type="button" onclick="modify()">修正する</button>
+      <button type="button" onclick="enroll()">登録する</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function modify() {
+   location.href='/modify'; // url変更してください
+  }
+
+  function enroll() {
+    location.href='/enroll'; // url変更してください
+  }
+</script>
